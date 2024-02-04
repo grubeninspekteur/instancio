@@ -120,7 +120,6 @@
                     <archive>
                         <manifestEntries>
                             <Multi-Release>true</Multi-Release>
-                            <Automatic-Module-Name>org.instancio.core</Automatic-Module-Name>
                         </manifestEntries>
                     </archive>
                 </configuration>

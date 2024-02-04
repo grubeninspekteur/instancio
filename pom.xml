@@ -146,7 +146,7 @@
                             </goals>
                             <configuration>
                                 <rules>
-                                    <dependencyConvergence />
+                                    <dependencyConvergence/>
                                     <requireJavaVersion>
                                         <version>${maven.enforcer.require.java.version}</version>
                                     </requireJavaVersion>
@@ -160,6 +160,20 @@
                     <artifactId>maven-compiler-plugin</artifactId>
                     <version>3.11.0</version>
                     <executions>
+                        <execution>
+                            <id>java-9</id>
+                            <phase>compile</phase>
+                            <goals>
+                                <goal>compile</goal>
+                            </goals>
+                            <configuration>
+                                <release>9</release>
+                                <compileSourceRoots>
+                                    <compileSourceRoot>${project.basedir}/src/main/java9</compileSourceRoot>
+                                </compileSourceRoots>
+                                <multiReleaseOutput>true</multiReleaseOutput>
+                            </configuration>
+                        </execution>
                         <execution>
                             <id>java-16</id>
                             <phase>compile</phase>
